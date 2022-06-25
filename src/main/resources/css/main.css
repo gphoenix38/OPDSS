@@ -1,0 +1,46 @@
+.root{
+    -fx-background-color: white;
+}
+
+.hbox{
+    -fx-border-color: #b0b0b0;
+    -fx-border-width: 0 0 0.5 0;
+    -fx-background-color: transparent;
+}
+
+.jfx-button{
+    -fx-background-color: #eaeaea;
+}
+
+.text-field {
+    -fx-border-width: 0 0 0 0;
+    -fx-background-color: transparent;
+}
+
+.text-field:focused {
+    -fx-border-color: #ff3030;
+    -fx-border-width: 0 0 0 0;
+    -fx-background-color: transparent;
+}
+
+.my_list-view{
+    -fx-border-width: 0;
+    -fx-background-color: white;
+}
+.my_list-view .virtual-flow .scroll-bar{
+    -fx-background-color: WHITE;
+}
+
+.my_list-view .virtual-flow .scroll-bar .thumb{
+    -fx-background-color: rgba(255, 138, 0, 0.35);
+}
+
+.my_list-view .list-cell:hover {
+    -fx-background-color: rgba(255, 138, 0, 0.35);
+    -fx-text-fill: black;
+}
+
+.my_list-view .list-cell:selected {
+    -fx-background-color: rgba(255, 138, 0, 0.6);
+    -fx-text-fill: white;
+}

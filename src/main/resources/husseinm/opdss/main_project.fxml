@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+
+<BorderPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="husseinm.opdss.MainProjectController">
+   <center>
+      <StackPane stylesheets="@../../css/main_project.css">
+         <children>
+            <VBox alignment="BOTTOM_CENTER">
+               <children>
+                  <Label fx:id="lbl_error" style="-fx-background-color: red; -fx-text-fill: white; -fx-background-radius: 5; -fx-opacity: 0.6;" text="error: Enter valid value" visible="false">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <AnchorPane fx:id="root" focusTraversable="true" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/main_project.css" />
+            <TableView fx:id="tableView" prefHeight="200.0" prefWidth="600.0" visible="false">
+              <columns>
+                <TableColumn fx:id="col_pipe" prefWidth="75.0" text="Pipe Id" />
+                <TableColumn fx:id="col_comm" prefWidth="120.0" text="Commulatie Flow (m3/s)" />
+                  <TableColumn fx:id="col_us" prefWidth="120.0" text="U/S Elevation (m)" />
+                  <TableColumn fx:id="col_ds" prefWidth="120.0" text="D/S Elevation (m)" />
+                  <TableColumn fx:id="col_len_sewer" prefWidth="120.0" text="Length of Sewer Pipe (m)" />
+                  <TableColumn fx:id="col_ground_slope" prefWidth="120.0" text="Ground Slope (%)" />
+                  <TableColumn fx:id="col_ava_pipes" prefWidth="120.0" text="Commercial Available Pipe Diameter (mm)" />
+                  <TableColumn fx:id="col_final_velo" prefWidth="120.0" text="Final Velocity (m/s)" />
+                  <TableColumn fx:id="col_smin" prefWidth="120.0" text="sMin" />
+                  <TableColumn fx:id="col_mod_cost" prefWidth="120.0" text="Modified Construction Cost (Nkf)" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tableView_detailed" visible="false">
+               <columns>
+                  <TableColumn fx:id="col_dpipe" prefWidth="75.0" text="Pipe Id" />
+                  <TableColumn fx:id="col_dcomm" prefWidth="75.0" text="Commulatie Flow (m3/s)" />
+                  <TableColumn fx:id="col_dus" prefWidth="75.0" text="U/S Elevation (m)" />
+                  <TableColumn fx:id="col_dds" prefWidth="75.0" text="D/S Elevation (m)" />
+                  <TableColumn fx:id="col_dlen_sewer" prefWidth="75.0" text="Length of Sewer Pipe (m)" />
+                  <TableColumn fx:id="col_dground_slope" prefWidth="75.0" text="Ground Slope (%)" />
+                  <TableColumn fx:id="col_dava_pipes" prefWidth="75.0" text="Commercial Available Pipe Diameter (mm)" />
+                  <TableColumn fx:id="col_drelative_depth1" prefWidth="75.0" text="Relative depth (d/D)" />
+                  <TableColumn fx:id="col_dfinal_design_velocity1" prefWidth="75.0" text="Final Design Velocity (m/s)" />
+                  <TableColumn fx:id="col_dhead_loss1" prefWidth="75.0" text="Head Loss (m)" />
+                  <TableColumn fx:id="col_dsmin1" prefWidth="75.0" text="sMin" />
+                  <TableColumn fx:id="col_dfinal_design_slope1" prefWidth="75.0" text="Final Design Slope (%)" />
+                  <TableColumn fx:id="col_dmodified_const_cost" prefWidth="75.0" text="Modified construction cost (Nkf)" />
+                  <TableColumn fx:id="col_dcheck_for_all" prefWidth="75.0" text="Overall Feasibility Check" />
+                  <TableColumn fx:id="col_dcheck_for_min_slope" prefWidth="75.0" text="Check for minimum slope" />
+                  <TableColumn fx:id="col_dcheck_min_velocity1" prefWidth="75.0" text="Check for min velocity" />
+                  <TableColumn fx:id="col_drelative_depth" prefWidth="75.0" text="Relative depth (d/D)" />
+                  <TableColumn fx:id="col_dcentral_angle" prefWidth="75.0" text="Central angle" />
+                  <TableColumn fx:id="col_drR" prefWidth="75.0" text="r/R" />
+                  <TableColumn fx:id="col_daA" prefWidth="75.0" text="a/A" />
+                  <TableColumn fx:id="col_dvV" prefWidth="75.0" text="v/V" />
+                  <TableColumn fx:id="col_dr" prefWidth="75.0" text="R" />
+                  <TableColumn fx:id="col_drSmall" prefWidth="75.0" text="r" />
+                  <TableColumn fx:id="col_da" prefWidth="75.0" text="a " />
+                  <TableColumn fx:id="col_dv" prefWidth="75.0" text="v" />
+                  <TableColumn fx:id="col_dcheck_min_velocity" prefWidth="75.0" text="Check for min velocity" />
+                  <TableColumn fx:id="col_dmanning_coefficient" prefWidth="75.0" text="Manning's coefficient (n)" />
+                  <TableColumn fx:id="col_dsmin" prefWidth="75.0" text="Smin" />
+                  <TableColumn fx:id="col_dvfull" prefWidth="75.0" text="Vfull" />
+                  <TableColumn fx:id="col_dvSmall" prefWidth="75.0" text="v" />
+                  <TableColumn fx:id="col_dcheck_min_velocity_slope" prefWidth="75.0" text="Check for min velocity" />
+                  <TableColumn fx:id="col_droughness_coefficient" prefWidth="75.0" text="Roughness coefficient" />
+                  <TableColumn fx:id="col_dava_head" prefWidth="75.0" text="Available Head" />
+                  <TableColumn fx:id="col_dhead_loss" prefWidth="75.0" text="Head loss (m)" />
+                  <TableColumn fx:id="col_dcheck_head_loss" prefWidth="75.0" text="Check for head loss" />
+                  <TableColumn fx:id="col_dv_06" prefWidth="75.0" text="v (0.6)" />
+                  <TableColumn fx:id="col_dslope_06" prefWidth="75.0" text="Slope 0.6" />
+                  <TableColumn fx:id="col_dcheck_for_slope_06" prefWidth="75.0" text="Check for slope 0.6" />
+                  <TableColumn fx:id="col_dv_partial" prefWidth="75.0" text="Vpartial" />
+                  <TableColumn fx:id="col_dadjacent_slope" prefWidth="75.0" text="Adjacent slope" />
+                  <TableColumn fx:id="col_dcover" prefWidth="75.0" text="Nominal Cover (m)" />
+                  <TableColumn fx:id="col_dus_invert_depth" prefWidth="75.0" text="U/S invert depth" />
+                  <TableColumn fx:id="col_dds_invert_depth" prefWidth="75.0" text="D/S invert depth" />
+                  <TableColumn fx:id="col_dmod_ivert_depth" prefWidth="75.0" text="Modified invert depth" />
+                  <TableColumn fx:id="col_dmin_cover" prefWidth="75.0" text="Min Cover (m)" />
+                  <TableColumn fx:id="col_dadjasted_invert_depth" prefWidth="75.0" text="Adjusted inverted depth" />
+                  <TableColumn fx:id="col_dadjasted_slope" prefWidth="75.0" text="Adjusted slope" />
+                  <TableColumn fx:id="col_dcheck_adjasted_slope" prefWidth="75.0" text="Check for adjusted slope" />
+                  <TableColumn fx:id="col_dfinal_design_velocity" prefWidth="75.0" text="Final design velocity (m/s)" />
+                  <TableColumn fx:id="col_dfinal_design_slope" prefWidth="75.0" text="Final design slope (%)" />
+                  <TableColumn fx:id="col_dwidth_trench" prefWidth="75.0" text="Width of trench (m)" />
+                  <TableColumn fx:id="col_dvol_excavation" prefWidth="75.0" text="Volume of excavation (m3)" />
+                  <TableColumn fx:id="col_dmod_vol_excavation" prefWidth="75.0" text="Modified volume of excavation (m3)" />
+                  <TableColumn fx:id="col_drate_excavation" prefWidth="75.0" text="Rate of excavation (Nkf/m3)" />
+                  <TableColumn fx:id="col_dcost_excavation" prefWidth="75.0" text="Cost of excavation (Nkf)" />
+                  <TableColumn fx:id="col_dmod_cost_excavation" prefWidth="75.0" text="Modified cost of excavation (Nkf)" />
+                  <TableColumn fx:id="col_dvol_backfilling" prefWidth="75.0" text="Volume of backfilling (m3)" />
+                  <TableColumn fx:id="col_dvol_mod_backfilling" prefWidth="75.0" text="Volume of modified backfilling (m3)" />
+                  <TableColumn fx:id="col_drate_backfilling" prefWidth="75.0" text="Rate of backfilling (Nkf/m3)" />
+                  <TableColumn fx:id="col_dcost_backfilling" prefWidth="75.0" text="Cost of backfilling (Nkf/m3)" />
+                  <TableColumn fx:id="col_dcost_mod_backfilling" prefWidth="75.0" text="Cost of modified backfilling (Nkf)" />
+                  <TableColumn fx:id="col_dunit_price" prefWidth="75.0" text="Unti price (Nkf)" />
+                  <TableColumn fx:id="col_dcost_pipe" prefWidth="75.0" text="Cost of pipe (Nkf)" />
+                  <TableColumn fx:id="col_dmanhole_size" prefWidth="75.0" text="Manhole size (mm)" />
+                  <TableColumn fx:id="col_dvol_material_manhole" prefWidth="75.0" text="Volume of material used for manhole (m3)" />
+                  <TableColumn fx:id="col_drate_material_manhole" prefWidth="75.0" text="Rate of materials used for manhole (Nkf/m3)" />
+                  <TableColumn fx:id="col_dcost_manhole" prefWidth="75.0" text="Cost of manhole (Nkf)" />
+                  <TableColumn fx:id="col_dtotal_cost_of_const" prefWidth="75.0" text="Total construction cost" />
+                  <TableColumn fx:id="col_mod_const_cost" prefWidth="75.0" text="Modified construction cost (Nkf)" />
+               </columns>
+            </TableView>
+         </children>
+      </StackPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" layoutX="544.0" layoutY="10.0" prefHeight="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <children>
+                  <JFXButton fx:id="btn_connect" focusTraversable="false" text="Connect">
+                     <graphic>
+                        <SVGPath fx:id="svg_connect" content="M19 3C17.346 3 16 4.346 16 6C16 6.4617584 16.113553 6.8939944 16.300781 7.2851562L12.585938 11L7.8164062 11C7.4021391 9.8387486 6.3016094 9 5 9C3.346 9 2 10.346 2 12C2 13.654 3.346 15 5 15C6.3016094 15 7.4021391 14.161251 7.8164062 13L12.585938 13L16.300781 16.714844C16.113553 17.106006 16 17.538242 16 18C16 19.654 17.346 21 19 21C20.654 21 22 19.654 22 18C22 16.346 20.654 15 19 15C18.538242 15 18.106006 15.113553 17.714844 15.300781L14.414062 12L17.714844 8.6992188C18.106006 8.8864466 18.538242 9 19 9C20.654 9 22 7.654 22 6C22 4.346 20.654 3 19 3 z" scaleX="0.7" scaleY="0.7" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_run" focusTraversable="false" layoutX="20.0" layoutY="12.0" text="Run">
+                     <graphic>
+                        <SVGPath fx:id="svg_connect1" content="M8,6.822v10.357c0,0.789,0.871,1.267,1.537,0.844l8.137-5.178c0.618-0.393,0.618-1.294,0-1.687L9.537,5.978 C8.871,5.554,8,6.033,8,6.822z" fill="#0fe100" scaleX="0.7" scaleY="0.7" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_run11" focusTraversable="false" layoutX="155.0" layoutY="13.0" onAction="#editVariables" text="Edit Variables">
+                     <graphic>
+                        <SVGPath fx:id="svg_connect112" content="M5 3C3.9069372 3 3 3.9069372 3 5L3 19C3 20.093063 3.9069372 21 5 21L19 21C20.093063 21 21 20.093063 21 19L21 5C21 3.9069372 20.093063 3 19 3L5 3 z M 5 5L19 5L19 7L5 7L5 5 z M 5 9L19 9L19 19L5 19L5 9 z M 6.3535156 11C6.3535156 11 6 12 6 14C6 16 6.3535156 17 6.3535156 17L8 17C8 17 7.6464844 16 7.6464844 14C7.6464844 12 8 11 8 11L6.3535156 11 z M 9.5 11L11.150391 14L9.5 17L11.199219 17L12 15.544922L12.800781 17L14.5 17L12.849609 14L14.5 11L12.800781 11L12 12.455078L11.199219 11L9.5 11 z M 16 11C16 11 16.353516 12 16.353516 14C16.353516 16 16 17 16 17L17.646484 17C17.646484 17 18 16 18 14C18 12 17.646484 11 17.646484 11L16 11 z" scaleX="0.7" scaleY="0.7" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_run111" focusTraversable="false" layoutX="262.0" layoutY="13.0" onAction="#avaPipes" text="Available Pipes">
+                     <graphic>
+                        <SVGPath fx:id="svg_connect1121" content="M3 2L3 10L5 10L5 9L9 9L9 16C9 18.749516 11.250484 21 14 21L19 21L19 22L21 22L21 14L19 14L19 15L15 15L15 8C15 5.2504839 12.749516 3 10 3L5 3L5 2L3 2 z M 5 5L10 5C11.668484 5 13 6.3315161 13 8L13 11L11 11L11 9C11 7.9069372 10.093063 7 9 7L5 7L5 5 z M 11 13L13 13L13 15C13 16.093063 13.906937 17 15 17L19 17L19 19L14 19C12.331516 19 11 17.668484 11 16L11 1M3 2L3 10L5 10L5 9L9 9L9 16C9 18.749516 11.250484 21 14 21L19 21L19 22L21 22L21 14L19 14L19 15L15 15L15 8C15 5.2504839 12.749516 3 10 3L5 3L5 2L3 2 z M 5 5L10 5C11.668484 5 13 6.3315161 13 8L13 11L11 11L11 9C11 7.9069372 10.093063 7 9 7L5 7L5 5 z M 11 13L13 13L13 15C13 16.093063 13.906937 17 15 17L19 17L19 19L14 19C12.331516 19 11 17.668484 11 16L11 13 z" scaleX="0.7" scaleY="0.7" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_run1111" focusTraversable="false" layoutX="376.0" layoutY="13.0" onAction="#designDischarge" text="Design Discharge">
+                     <graphic>
+                        <SVGPath fx:id="svg_connect11211" content="M8 2L2 8L7 13L3 17L3 21L7 21L11 17L16 22L22 16L17 11L21.707031 6.2929688C22.098031 5.9019687 22.098031 5.2689063 21.707031 4.8789062L19.121094 2.2929688C18.926094 2.0979688 18.670063 2 18.414062 2C18.158062 2 17.902031 2.0979687 17.707031 2.2929688L13 7L8 2 z M 18.414062 4.4140625L19.585938 5.5859375L18.292969 6.8789062L17.121094 5.7070312L18.414062 4.4140625 z M 8 4.828125L11.585938 8.4140625L8.4140625 11.585938L4.828125 8L8 4.828125 z M 15.707031 7.1210938L16.878906 8.2929688L6.171875 19L5 19L5 17.828125L15.707031 7.1210938 z M 15.585938 12.414062L19.171875 16L16 19.171875L12.414062 15.585938L15.585938 12.414062 z" scaleX="0.7" scaleY="0.7" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="show_graph" focusTraversable="false" layoutX="104.0" layoutY="13.0" onAction="#onShowGraph" text="Show Graph" visible="false">
+                     <graphic>
+                        <SVGPath fx:id="svg_connect11" content="M12 4C5.142 4 1.8857031 9.8786406 1.0957031 11.556641C0.96370312 11.836641 0.96370313 12.161406 1.0957031 12.441406C1.8857031 14.120406 5.142 20 12 20C18.834 20 22.092484 14.162937 22.896484 12.460938C23.034484 12.167938 23.034484 11.832062 22.896484 11.539062C22.092484 9.8370625 18.834 4 12 4 z M 12 7C14.761 7 17 9.239 17 12C17 14.761 14.761 17 12 17C9.239 17 7 14.761 7 12C7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z" scaleX="0.7" scaleY="0.7" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_show_details" focusTraversable="false" layoutX="155.0" layoutY="13.0" onAction="#onShowDetailed" text="Show Details" visible="false">
+                     <graphic>
+                        <SVGPath fx:id="svg_connect111" content="M4 3C2.897 3 2 3.897 2 5L2 9C2 10.103 2.897 11 4 11L8 11C9.103 11 10 10.103 10 9L10 5C10 3.897 9.103 3 8 3L4 3 z M 5 6L7 6L7 8L5 8L5 6 z M 12 6L12 8L13 8L16 8L17 8L17 6L16 6L13 6L12 6 z M 19 6L19 8L20 8L21 8L22 8L22 6L21 6L20 6L19 6 z M 4 13C2.897 13 2 13.897 2 15L2 19C2 20.103 2.897 21 4 21L8 21C9.103 21 10 20.103 10 19L10 15C10 13.897 9.103 13 8 13L4 13 z M 6 16C6.552 16 7 16.448 7 17C7 17.552 6.552 18 6 18C5.448 18 5 17.552 5 17C5 16.448 5.448 16 6 16 z M 12 16L12 18L13 18L16 18L17 18L17 16L16 16L13 16L12 16 z M 19 16L19 18L20 18L21 18L22 18L22 16L21 16L20 16L19 16 z" scaleX="0.7" scaleY="0.7" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="30.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="btn_exit" focusTraversable="false" text="Exit">
+                     <graphic>
+                        <SVGPath content="M6 2C4.897 2 4 2.897 4 4L4 20C4 21.103 4.897 22 6 22L18 22C19.103 22 20 21.103 20 20L20 15.25L18.001953 16.748047L18.001953 20L6 20L6 4L18 4L18 7.25L20 8.75L20 4C20 2.897 19.103 2 18 2L6 2 z M 16 8.25L16 11L11 11L11 13L16 13L16 15.75L21 12L16 8.25 z" scaleX="0.7" scaleY="0.7" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

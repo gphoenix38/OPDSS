@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<StackPane stylesheets="@../../css/intro.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="husseinm.opdss.IntroController">
+   <children>
+      <VBox alignment="BOTTOM_CENTER">
+         <children>
+            <Label fx:id="lbl_error" style="-fx-background-color: red; -fx-text-fill: white; -fx-background-radius: 5; -fx-opacity: 0.6;" text="error: Enter valid value" visible="false">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Label>
+         </children>
+         <StackPane.margin>
+            <Insets bottom="20.0" />
+         </StackPane.margin>
+      </VBox>
+      <VBox fx:id="phase_one" alignment="CENTER" stylesheets="@../../css/intro.css">
+         <children>
+            <AnchorPane>
+               <children>
+                  <VBox alignment="CENTER" layoutX="30.0" layoutY="14.0" spacing="5.0">
+                     <children>
+                        <AnchorPane prefHeight="50.0">
+                           <children>
+                              <VBox fx:id="vBox_project" layoutY="12.0" styleClass="vbox-unfocued">
+                                 <children>
+                                    <TextField fx:id="tf_project" alignment="CENTER" prefHeight="40.0" prefWidth="500.0" styleClass="tf">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <Label fx:id="lbl_title_project_name" layoutX="14.0" layoutY="-6.0" styleClass="title" text="Name of Your Project">
+                                 <padding>
+                                    <Insets left="10.0" right="20.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Calibri Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="30.0" layoutY="14.0" spacing="5.0">
+                     <children>
+                        <AnchorPane prefHeight="50.0">
+                           <children>
+                              <VBox fx:id="vBox_manning" layoutY="12.0" styleClass="vbox-unfocued">
+                                 <children>
+                                    <TextField fx:id="tf_manning" alignment="CENTER" prefHeight="40.0" prefWidth="500.0" styleClass="tf">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <Label fx:id="lbl_title_manning" layoutX="14.0" layoutY="-6.0" styleClass="title" text="Manning's Coefficient (n)">
+                                 <padding>
+                                    <Insets left="10.0" right="20.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Calibri Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="91.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="30.0" layoutY="14.0" spacing="5.0">
+                     <children>
+                        <AnchorPane prefHeight="50.0">
+                           <children>
+                              <VBox fx:id="vBox_roughness" layoutY="12.0" styleClass="vbox-unfocued">
+                                 <children>
+                                    <TextField fx:id="tf_roughness" alignment="CENTER" prefHeight="40.0" prefWidth="500.0" styleClass="tf">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <Label fx:id="lbl_title_roughness" layoutX="14.0" layoutY="-6.0" styleClass="title" text="Roughness Coefficient (f)">
+                                 <padding>
+                                    <Insets left="10.0" right="20.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Calibri Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="172.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="30.0" layoutY="14.0" spacing="5.0">
+                     <children>
+                        <AnchorPane prefHeight="50.0">
+                           <children>
+                              <VBox fx:id="vBox_nominal" layoutY="12.0" styleClass="vbox-unfocued">
+                                 <children>
+                                    <TextField fx:id="tf_nominal" alignment="CENTER" prefHeight="40.0" prefWidth="500.0" styleClass="tf">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <Label fx:id="lbl_title_nominal" layoutX="14.0" layoutY="-6.0" styleClass="title" text="Nominal Cover (m)">
+                                 <padding>
+                                    <Insets left="10.0" right="20.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Calibri Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="253.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="30.0" layoutY="14.0" spacing="5.0">
+                     <children>
+                        <AnchorPane prefHeight="50.0">
+                           <children>
+                              <VBox fx:id="vBox_minimum" layoutY="12.0" styleClass="vbox-unfocued">
+                                 <children>
+                                    <TextField fx:id="tf_minimum" alignment="CENTER" prefHeight="40.0" prefWidth="500.0" styleClass="tf">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <Label fx:id="lbl_title_minimum" layoutX="14.0" layoutY="-6.0" styleClass="title" text="Minimum Cover (m)">
+                                 <padding>
+                                    <Insets left="10.0" right="20.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Calibri Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="334.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="30.0" layoutY="14.0" spacing="5.0">
+                     <children>
+                        <AnchorPane prefHeight="50.0">
+                           <children>
+                              <VBox fx:id="vBox_excavation" layoutY="12.0" styleClass="vbox-unfocued">
+                                 <children>
+                                    <TextField fx:id="tf_excavation" alignment="CENTER" prefHeight="40.0" prefWidth="500.0" styleClass="tf">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <Label fx:id="lbl_title_excavation" layoutX="14.0" layoutY="-6.0" styleClass="title" text="Rate of Excavation (Nkf/m3)">
+                                 <padding>
+                                    <Insets left="10.0" right="20.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Calibri Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </AnchorPane>
+            <AnchorPane layoutX="20.0" layoutY="410.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="30.0" layoutY="14.0" spacing="5.0">
+                     <children>
+                        <AnchorPane prefHeight="50.0">
+                           <children>
+                              <VBox fx:id="vBox_backfilling" layoutY="12.0" styleClass="vbox-unfocued">
+                                 <children>
+                                    <TextField fx:id="tf_backfilling" alignment="CENTER" prefHeight="40.0" prefWidth="500.0" styleClass="tf">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <Label fx:id="lbl_title_backfilling" layoutX="14.0" layoutY="-6.0" styleClass="title" text="Rate of Backfilling (Nkf/m3)">
+                                 <padding>
+                                    <Insets left="10.0" right="20.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Calibri Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="496.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="30.0" layoutY="14.0" spacing="5.0">
+                     <children>
+                        <AnchorPane prefHeight="50.0">
+                           <children>
+                              <VBox fx:id="vBox_material" layoutY="12.0" styleClass="vbox-unfocued">
+                                 <children>
+                                    <TextField fx:id="tf_material" alignment="CENTER" prefHeight="40.0" prefWidth="500.0" styleClass="tf">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <Label fx:id="lbl_title_material" layoutX="14.0" layoutY="-6.0" styleClass="title" text="Rate of Materials Used For Manhole (Nkf/m3)">
+                                 <padding>
+                                    <Insets left="10.0" right="20.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Calibri Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </AnchorPane>
+            <BorderPane>
+               <left>
+                  <JFXButton fx:id="btn_prev" onAction="#onPrevious" ripplerFill="#ff8a00" styleClass="btn" text="PREVIOUS" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <SVGPath content="M10 5.3417969C9.744125 5.3417969 9.4879688 5.4412187 9.2929688 5.6367188L3.6367188 11.292969C3.2457187 11.683969 3.2457187 12.317031 3.6367188 12.707031L9.2929688 18.363281C9.6839688 18.754281 10.317031 18.754281 10.707031 18.363281L10.792969 18.277344C11.183969 17.886344 11.183969 17.253281 10.792969 16.863281L6.9296875 13L20 13C20.552 13 21 12.552 21 12C21 11.448 20.552 11 20 11L6.9296875 11L10.792969 7.1367188C11.183969 6.7457187 11.183969 6.1126563 10.792969 5.7226562L10.707031 5.6367188C10.511531 5.4412187 10.255875 5.3417969 10 5.3417969 z" />
+                     </graphic>
+                  </JFXButton>
+               </left>
+               <right>
+                  <JFXButton fx:id="btn_next" contentDisplay="RIGHT" onAction="#onNext" ripplerFill="#ff8a00" styleClass="btn" text="NEXT" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <SVGPath content="M14 5.3417969C13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188L13.207031 5.7226562C12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188L17.070312 11L4 11C3.448 11 3 11.448 3 12C3 12.552 3.448 13 4 13L17.070312 13L13.207031 16.863281C12.816031 17.254281 12.816031 17.887344 13.207031 18.277344L13.292969 18.363281C13.683969 18.754281 14.317031 18.754281 14.707031 18.363281L20.363281 12.707031C20.754281 12.316031 20.754281 11.682969 20.363281 11.292969L14.707031 5.6367188C14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z" />
+                     </graphic>
+                  </JFXButton>
+               </right>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </BorderPane>
+         </children>
+         <padding>
+            <Insets left="10.0" right="20.0" top="10.0" />
+         </padding>
+      </VBox>
+      <VBox fx:id="phase_two" alignment="CENTER" layoutX="10.0" layoutY="10.0" stylesheets="@../../css/intro.css" visible="false">
+         <children>
+            <Label fx:id="lbl_diameter1" text="Available Commercial Pipe Diameter" underline="true">
+               <padding>
+                  <Insets left="10.0" right="20.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font name="Calibri Light" size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane>
+               <children>
+                  <HBox alignment="BOTTOM_CENTER" layoutX="30.0" layoutY="8.0" spacing="30.0">
+                     <children>
+                        <VBox alignment="CENTER" spacing="5.0">
+                           <children>
+                              <AnchorPane prefHeight="50.0">
+                                 <children>
+                                    <VBox fx:id="vBox_diameter" layoutY="12.0" styleClass="vbox">
+                                       <children>
+                                          <TextField fx:id="tf_diameter" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" styleClass="tf">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                    <Label fx:id="lbl_diameter" layoutX="14.0" layoutY="-6.0" styleClass="title" text="Diameter (m)">
+                                       <padding>
+                                          <Insets left="10.0" right="20.0" top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Calibri Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="512.0" layoutY="10.0" spacing="5.0">
+                           <children>
+                              <AnchorPane prefHeight="50.0">
+                                 <children>
+                                    <VBox fx:id="vBox_price" layoutY="12.0" styleClass="vbox">
+                                       <children>
+                                          <TextField fx:id="tf_price" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" styleClass="tf">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                    <Label fx:id="lbl_price" layoutX="14.0" layoutY="-6.0" styleClass="title" text="Price (Nkf/m)">
+                                       <padding>
+                                          <Insets left="10.0" right="20.0" top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Calibri Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                        <JFXButton fx:id="btn_add" onAction="#onAddClicked" prefWidth="70.0" text="ADD">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </AnchorPane>
+            <TableView fx:id="tableView" editable="true" prefHeight="531.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="col_diameter" prefWidth="304.0" text="Diameter (m)" />
+                  <TableColumn fx:id="col_price" minWidth="0.0" prefWidth="295.0" text="Price (Nkf/m)" />
+              </columns>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </TableView>
+            <BorderPane>
+               <left>
+                  <JFXButton fx:id="btn_prev1" onAction="#onPrevious" ripplerFill="#ff8a00" styleClass="btn" text="PREVIOUS" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <SVGPath content="M10 5.3417969C9.744125 5.3417969 9.4879688 5.4412187 9.2929688 5.6367188L3.6367188 11.292969C3.2457187 11.683969 3.2457187 12.317031 3.6367188 12.707031L9.2929688 18.363281C9.6839688 18.754281 10.317031 18.754281 10.707031 18.363281L10.792969 18.277344C11.183969 17.886344 11.183969 17.253281 10.792969 16.863281L6.9296875 13L20 13C20.552 13 21 12.552 21 12C21 11.448 20.552 11 20 11L6.9296875 11L10.792969 7.1367188C11.183969 6.7457187 11.183969 6.1126563 10.792969 5.7226562L10.707031 5.6367188C10.511531 5.4412187 10.255875 5.3417969 10 5.3417969 z" />
+                     </graphic>
+                  </JFXButton>
+               </left>
+               <right>
+                  <JFXButton fx:id="btn_next1" contentDisplay="RIGHT" defaultButton="true" onAction="#onNext" ripplerFill="#ff8a00" styleClass="btn" text="NEXT" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <SVGPath content="M14 5.3417969C13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188L13.207031 5.7226562C12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188L17.070312 11L4 11C3.448 11 3 11.448 3 12C3 12.552 3.448 13 4 13L17.070312 13L13.207031 16.863281C12.816031 17.254281 12.816031 17.887344 13.207031 18.277344L13.292969 18.363281C13.683969 18.754281 14.317031 18.754281 14.707031 18.363281L20.363281 12.707031C20.754281 12.316031 20.754281 11.682969 20.363281 11.292969L14.707031 5.6367188C14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z" />
+                     </graphic>
+                  </JFXButton>
+               </right>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </BorderPane>
+         </children>
+         <padding>
+            <Insets left="10.0" right="20.0" top="10.0" />
+         </padding>
+      </VBox>
+      <VBox fx:id="phase_three" alignment="CENTER" layoutX="10.0" layoutY="10.0" stylesheets="@../../css/intro.css" visible="false">
+         <children>
+            <AnchorPane>
+               <children>
+                  <VBox alignment="CENTER" layoutX="30.0" layoutY="8.0" prefHeight="640.0" prefWidth="552.0" spacing="5.0">
+                     <children>
+                        <AnchorPane prefHeight="50.0">
+                           <children>
+                              <VBox fx:id="vBox_discharge" layoutX="25.0" layoutY="18.0" styleClass="vbox">
+                                 <children>
+                                    <TextField fx:id="tf_discharge" alignment="CENTER" prefHeight="300.0" prefWidth="500.0" styleClass="tf">
+                                       <font>
+                                          <Font size="96.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <Label fx:id="lbl_discharge" layoutX="39.0" layoutY="-2.0" styleClass="title" text="Design Discharge (m3/s)">
+                                 <padding>
+                                    <Insets left="10.0" right="20.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Calibri Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </AnchorPane>
+            <BorderPane>
+               <left>
+                  <JFXButton fx:id="btn_prev11" onAction="#onPrevious" ripplerFill="#ff8a00" styleClass="btn" text="PREVIOUS" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <SVGPath content="M10 5.3417969C9.744125 5.3417969 9.4879688 5.4412187 9.2929688 5.6367188L3.6367188 11.292969C3.2457187 11.683969 3.2457187 12.317031 3.6367188 12.707031L9.2929688 18.363281C9.6839688 18.754281 10.317031 18.754281 10.707031 18.363281L10.792969 18.277344C11.183969 17.886344 11.183969 17.253281 10.792969 16.863281L6.9296875 13L20 13C20.552 13 21 12.552 21 12C21 11.448 20.552 11 20 11L6.9296875 11L10.792969 7.1367188C11.183969 6.7457187 11.183969 6.1126563 10.792969 5.7226562L10.707031 5.6367188C10.511531 5.4412187 10.255875 5.3417969 10 5.3417969 z" />
+                     </graphic>
+                  </JFXButton>
+               </left>
+               <right>
+                  <JFXButton fx:id="btn_next11" contentDisplay="RIGHT" defaultButton="true" onAction="#onNext" ripplerFill="#ff8a00" styleClass="btn" text="NEXT" BorderPane.alignment="CENTER">
+                     <graphic>
+                        <SVGPath content="M14 5.3417969C13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188L13.207031 5.7226562C12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188L17.070312 11L4 11C3.448 11 3 11.448 3 12C3 12.552 3.448 13 4 13L17.070312 13L13.207031 16.863281C12.816031 17.254281 12.816031 17.887344 13.207031 18.277344L13.292969 18.363281C13.683969 18.754281 14.317031 18.754281 14.707031 18.363281L20.363281 12.707031C20.754281 12.316031 20.754281 11.682969 20.363281 11.292969L14.707031 5.6367188C14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z" />
+                     </graphic>
+                  </JFXButton>
+               </right>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </BorderPane>
+         </children>
+         <padding>
+            <Insets left="10.0" right="20.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</StackPane>
