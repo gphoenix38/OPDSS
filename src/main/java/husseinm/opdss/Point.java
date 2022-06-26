@@ -11,6 +11,7 @@ public class Point {
     public Point(double x, double y) {
         this.x = x;
         this.y = y;
+       String str = "appropriate";
     }
 
     public Point(int id, int sn, double x, double y, double elevation, int project_id) {

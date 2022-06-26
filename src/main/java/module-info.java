@@ -1,4 +1,4 @@
-module com.example.civil {
+module husseinm.opdss {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
